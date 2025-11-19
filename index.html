@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artist Grid</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #f7f3eb;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header */
+        .header-wrapper {
+            width: 100%;
+            background: black;
+            /* 黑色背景 */
+            display: flex;
+            justify-content: center;
+            /* 让内部内容居中 */
+        }
+
+        .header {
+            width: 100%;
+            max-width: 990px;
+            /* 和照片宽度一致 */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: white;
+            /* 白色文字 */
+        }
+
+
+        /* Grid Container (centered) */
+        .grid-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* 5 columns, fixed width */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(5, 190px);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        /* Artist Card */
+        .card {
+            display: block;
+            /* 让 <a> 变成块状，不影响你目前的宽高 */
+            position: relative;
+            width: 190px;
+            height: 303.99px;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 4px;
+        }
+
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover img {
+            opacity: 0.75;
+        }
+
+        /* Text Overlay */
+        .name {
+            position: absolute;
+            right: 10px;
+            bottom: 30px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .territory {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 12px;
+            text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+            font-family: 'Montserrat', sans-serif;
+            font-style: italic;
+            font-weight: 100;
+        }
+
+        .footer-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .footer {
+            width: 100%;
+            max-width: 990px;
+            padding: 24px;
+            color: black;
+            font-size: 14px;
+            text-align: center;
+        }
+    </style>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header-wrapper">
+        <div class="header">
+            <div>CONTINUATION.</div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <!-- Centered Grid -->
+    <div class="grid-container">
+        <div class="grid">
+
+            <!-- Example cards -->
+
+            <a href="https://www.instagram.com/fullbatteris/?hl=en" target="_blank" class="card">
+                <img src="./fullbatteris.png" alt="" />
+                <div class="name">Xiaoyue Shen</div>
+                <div class="territory">Asia, CN, NZ</div>
+            </a>
+
+            <a href="https://www.instagram.com/issfanfan/?hl=en" target="_blank" class="card">
+                <img src="./issfanfan.png" alt="" />
+                <div class="name">fanfan</div>
+                <div class="territory"></div>
+            </a>
+
+            <a href="https://www.instagram.com/qtcinderella/?hl=en" target="_blank" class="card">
+                <img src="./qt.png" alt="" />
+                <div class="name">qtcinderella</div>
+                <div class="territory"></div>
+            </a>
+
+            <a href="https://www.instagram.com/peeguutv/?hl=en" target="_blank" class="card">
+                <img src="./lee.png" alt="" />
+                <div class="name">Peeguu</div>
+                <div class="territory"></div>
+            </a>
+
+            <a href="https://www.instagram.com/fuslie/?hl=en" target="_blank" class="card">
+                <img src="./leslie.png" alt="" />
+                <div class="name">leslie</div>
+                <div class="territory"></div>
+            </a>
+
+            <a href="https://www.instagram.com/jakenbakelive/?hl=en" target="_blank" class="card">
+                <img src="./jake.png" alt="" />
+                <div class="name">jake'n'bake</div>
+                <div class="territory"></div>
+            </a>
+
+            <a href="https://www.instagram.com/waterlynn/?hl=en" target="_blank" class="card">
+                <img src="./waterlynn.png" alt="" />
+                <div class="name">waterlynn</div>
+                <div class="territory"></div>
+            </a>
+
+            <a href="https://www.instagram.com/extra.emily/?hl=en" target="_blank" class="card">
+                <img src="./emily.png" alt="" />
+                <div class="name">emily</div>
+                <div class="territory"></div>
+            </a>
+
+            <a href="https://www.instagram.com/arkyszn/?hl=en" target="_blank" class="card">
+                <img src="./bryce.png" alt="" />
+                <div class="name">arky</div>
+                <div class="territory"></div>
+            </a>
+
+            <a href="https://www.instagram.com/patrickbrasca/?hl=en" target="_blank" class="card">
+                <img src="./patrick.png" alt="" />
+                <div class="name">patrick brasca</div>
+                <div class="territory"></div>
+            </a>
+
+            <a href="https://www.instagram.com/itschyl/?hl=en" target="_blank" class="card">
+                <img src="./chyl.png" alt="" />
+                <div class="name">chyl</div>
+                <div class="territory"></div>
+            </a>
+
+            <a href="https://www.instagram.com/misterarther/?hl=en" target="_blank" class="card">
+                <img src="./arther.png" alt="" />
+                <div class="name">arther</div>
+                <div class="territory"></div>
+            </a>
+
+            <a href="https://www.instagram.com/charmingjo_official/?hl=en" target="_blank" class="card">
+                <img src="./jo.png" alt="" />
+                <div class="name">charming jo</div>
+                <div class="territory"></div>
+            </a>
+
+            <a href="https://www.instagram.com/thewillneff/?hl=en" target="_blank" class="card">
+                <img src="./will.png" alt="" />
+                <div class="name">will neff</div>
+                <div class="territory"></div>
+            </a>
+
+            <a href="https://www.instagram.com/actuallymarche/?hl=en" target="_blank" class="card">
+                <img src="./marche.png" alt="" />
+                <div class="name">marche</div>
+                <div class="territory"></div>
+            </a>
+
+            <a href="https://www.instagram.com/joshuaseki/?hl=en" target="_blank" class="card">
+                <img src="./josh.png" alt="" />
+                <div class="name">joshseki</div>
+                <div class="territory"></div>
+            </a>
+
+            <a href="https://www.instagram.com/lujing_yy/?hl=en" target="_blank" class="card">
+                <img src="./lujing_yy.png" alt="" />
+                <div class="name">
+                    鹿井屿渔</div>
+                <div class="territory">Asia, CN, NZ</div>
+            </a>
+
+            <a href="https://www.instagram.com/bbblue98/?hl=en" target="_blank" class="card">
+                <img src="./IIRUN OUYANN.png" alt="" />
+                <div class="name">IIRUN OUYANN</div>
+                <div class="territory">Asia, JP, NZ</div>
+            </a>
+
+            <a href="https://www.instagram.com/704a_s/?hl=en" target="_blank" class="card">
+                <img src="./704as.png" alt="" />
+                <div class="name">704a_s</div>
+                <div class="territory">Asia, JP, NZ</div>
+            </a>
+
+            <a href="https://www.instagram.com/duu.3_3/?hl=en" target="_blank" class="card">
+                <img src="./dudu.png" alt="" />
+                <div class="name">dudu</div>
+                <div class="territory">Asia, JP, NZ</div>
+            </a>
+
+            <a href="https://www.instagram.com/bing0_0x/?hl=en" target="_blank" class="card">
+                <img src="./nagi.png" alt="" />
+                <div class="name">nagi</div>
+                <div class="territory">Asia, JP, NZ</div>
+            </a>
+
+            <a href="https://www.instagram.com/nagi_gigi_/?hl=en" target="_blank" class="card">
+                <img src="./Wu Renb.png" alt="" />
+                <div class="name">nagi</div>
+                <div class="territory">Asia, CN, NZ</div>
+            </a>
+
+            <a href="https://www.instagram.com/ueni00/?hl=en" target="_blank" class="card">
+                <img src="./ueni.png" alt="" />
+                <div class="name">ueni00</div>
+                <div class="territory">Asia, CN, NZ</div>
+            </a>
+
+            <a href="https://www.instagram.com/mlairportt/?hl=en" target="_blank" class="card">
+                <img src="./mlairportt.png  " alt="" />
+                <div class="name">mlaiportt</div>
+                <div class="territory">Asia, CN, NZ</div>
+            </a>
+
+            <a href="https://www.instagram.com/pinnnblin/?hl=en" target="_blank" class="card">
+                <img src="./pinn.png  " alt="" />
+                <div class="name">pinn</div>
+                <div class="territory">Asia, KR, NZ</div>
+            </a>
+
+            <a href="https://www.instagram.com/m_o_m_o_2_mass/?hl=en" target="_blank" class="card">
+                <img src="./momo2mass.png  " alt="" />
+                <div class="name">momo2mass</div>
+                <div class="territory">Asia, CN, NZ</div>
+            </a>
+
+            <a href="https://www.instagram.com/44ii427/?hl=en" target="_blank" class="card">
+                <img src="./tamama.png  " alt="" />
+                <div class="name">tamama</div>
+                <div class="territory">Asia, JP, NZ</div>
+            </a>
+
+            <a href="https://www.instagram.com/lejinfan/?hl=en" target="_blank" class="card">
+                <img src="./jin.png  " alt="" />
+                <div class="name">jin</div>
+                <div class="territory">Asia, CN, NZ</div>
+            </a>
+
+            <a href="https://www.instagram.com/co_co9691/?hl=en" target="_blank" class="card">
+                <img src="./coco.png  " alt="" />
+                <div class="name">coco</div>
+                <div class="territory">Asia, CN, NZ</div>
+            </a>
+
+            <a href="https://www.instagram.com/shizuku_zhi/?hl=en" target="_blank" class="card">
+                <img src="./水野治.png  " alt="" />
+                <div class="name">水野治</div>
+                <div class="territory">Asia, CN, NZ</div>
+            </a>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <div class="card">
+                <img src="./tan_suan.png" alt="" />
+                <div class="name">Artist 1</div>
+                <div class="territory">Asia, AU, NZ</div>
+            </div>
+
+            <!-- 继续复制即可新增 -->
+        </div>
+    </div>
+
+    <div class="footer-wrapper">
+        <div class="footer">
+            @ 2025 Continuation Holding Company
+        </div>
+    </div>
+
+
+</body>
+
+</html>
