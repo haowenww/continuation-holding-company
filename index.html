@@ -124,6 +124,55 @@
             font-size: 14px;
             text-align: center;
         }
+
+        /* 📱 Mobile & Tablet Responsive */
+        @media (max-width: 1100px) {
+            .grid {
+                grid-template-columns: repeat(4, 1fr);
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 0 10px;
+            }
+
+            .header {
+                font-size: 20px;
+                padding: 16px;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+                width: 100%;
+            }
+
+            .card {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 190 / 304;
+                /* Keeps image shape */
+            }
+        }
+
+        @media (max-width: 400px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header {
+                font-size: 18px;
+            }
+        }
     </style>
 
     <link
@@ -390,31 +439,31 @@
                 <div class="territory"></div>
             </a>
 
-             <a href="https://www.instagram.com/techmagnet_yt/" target="_blank" class="card">
+            <a href="https://www.instagram.com/techmagnet_yt/" target="_blank" class="card">
                 <img src="./stefan.png  " alt="" />
                 <div class="name">Stefan Warecka</div>
                 <div class="territory"></div>
             </a>
 
-             <a href="https://www.instagram.com/tig3rlewis/?hl=en" target="_blank" class="card">
+            <a href="https://www.instagram.com/tig3rlewis/?hl=en" target="_blank" class="card">
                 <img src="./tiger.png  " alt="" />
                 <div class="name">Tiger Lewis</div>
                 <div class="territory"></div>
             </a>
 
-             <a href="https://www.instagram.com/edwardkso/?hl=en" target="_blank" class="card">
+            <a href="https://www.instagram.com/edwardkso/?hl=en" target="_blank" class="card">
                 <img src="./so.png  " alt="" />
                 <div class="name">Edward so</div>
                 <div class="territory"></div>
             </a>
 
-             <a href="https://www.instagram.com/jang.hayden/?hl=en" target="_blank" class="card">
+            <a href="https://www.instagram.com/jang.hayden/?hl=en" target="_blank" class="card">
                 <img src="./hyden.png  " alt="" />
                 <div class="name">hayden jang</div>
                 <div class="territory"></div>
             </a>
 
-             <a href="https://www.instagram.com/itskatchii/?hl=en" target="_blank" class="card">
+            <a href="https://www.instagram.com/itskatchii/?hl=en" target="_blank" class="card">
                 <img src="./katchii.png  " alt="" />
                 <div class="name">katchii</div>
                 <div class="territory"></div>
