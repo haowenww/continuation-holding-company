@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="grad" x1="0" y1="64" x2="64" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#7b2ff7"/>
+      <stop offset="100%" stop-color="#f107a3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded square background with gradient -->
+  <rect width="64" height="64" rx="16" ry="16" fill="url(#grad)" />
+
+  <!-- Serif "C" in the center -->
+  <text
+    x="50%"
+    y="50%"
+    fill="#ffffff"
+    font-size="34"
+    font-family="Georgia, 'Times New Roman', serif"
+    text-anchor="middle"
+    dominant-baseline="central">
+    C
+  </text>
+</svg>
